@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Climb4Dreams</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-900">
+    // NAVBAR
+
+    <nav class="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+      <div class="w-full px-6 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="text-green-700 font-extrabold text-xl flex-shrink-0">
+          Climb4Dreams
+        </div>
+
+        <!-- Center links -->
+        <ul
+          class="hidden md:flex space-x-10 text-gray-700 uppercase font-medium tracking-wide"
+        >
+          <li>
+            <a href="#mission" class="hover:text-green-500 transition-colors"
+              >OUR MISSION</a
+            >
+          </li>
+          <li>
+            <a href="#fellows" class="hover:text-green-500 transition-colors"
+              >THE FELLOWS</a
+            >
+          </li>
+          <li>
+            <a href="#journey" class="hover:text-green-500 transition-colors"
+              >IMPACT</a
+            >
+          </li>
+          <li>
+            <a href="#impact" class="hover:text-green-500 transition-colors"
+              >CURRICULUM</a
+            >
+          </li>
+        </ul>
+
+        <!-- Apply Now button -->
+        <div>
+          <a
+            href="https://forms.gle/3Pper7goa6jmqhKX9"
+            class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-2 rounded-full shadow-md transition-all duration-300"
+          >
+            Apply Now
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      class="h-screen bg-cover bg-center relative"
+      style="background-image: url(&quot;images/hero.png&quot;)"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60"
+      ></div>
+
+      <div
+        class="relative flex items-center justify-left h-full text-white text-left px-8"
+      >
+        <div class="max-w-2xl">
+          <h1 class="mb-6 drop-shadow-lg">
+            <span
+              class="font-extrabold text-[4.2rem] md:text-[6rem] leading-none block"
+              >Climb Towards</span
+            >
+            <span
+              class="font-serif text-[5rem] md:text-[7rem] leading-none block"
+              >Your Dreams</span
+            >
+          </h1>
+
+          <p class="mb-8 text-lg md:text-xl leading-relaxed drop-shadow-md">
+            A transformative leadership journey where you find your place, grow
+            into your purpose, and build a life that impacts the world.
+          </p>
+
+          <div class="flex items-center gap-4">
+            <a
+              href="https://forms.gle/3Pper7goa6jmqhKX9"
+              class="bg-[#f05d31] hover:bg-[#ff7b50] transition-all duration-300 px-8 py-4 rounded-full font-semibold shadow-lg inline-block"
+            >
+              Start Your Application
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=GiDPiKOGUN8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 text-sm md:text-base text-yellow-300 font-medium hover:text-yellow-200 transition-colors cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              WATCH THE EXPEDITION
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDENTITY -->
+    <section class="py-20 text-center px-6">
+      <h2 class="text-3xl font-bold mb-6">
+        You belong. You are becoming. You are building.
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div><h3 class="text-xl font-semibold">Belong</h3></div>
+        <div><h3 class="text-xl font-semibold">Become</h3></div>
+        <div><h3 class="text-xl font-semibold">Build</h3></div>
+      </div>
+    </section>
+
+    <!-- BELONG -->
+    <section
+      class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center"
+    >
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Belong: You Are Not Alone</h2>
+        <p>
+          Climb4Dreams is a space where you are seen, known, and valued. Before
+          anything else, you belong.
+        </p>
+      </div>
+
+      <img
+        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac"
+        class="rounded-xl"
+      />
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="py-20 bg-gray-50 text-center px-6">
+      <h2 class="text-3xl font-bold mb-10">Become: The Journey</h2>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div>
+          <h3 class="font-semibold mb-2">Prepare</h3>
+          <p>Build discipline and clarity.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Stretch</h3>
+          <p>Challenge your limits.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Transform</h3>
+          <p>Become stronger and confident.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="py-20 px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">What You Will Experience</h2>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div>Mountain expeditions</div>
+        <div>Leadership training</div>
+        <div>Mawazo Hub sessions</div>
+        <div>Cultural immersion</div>
+        <div>Community service</div>
+        <div>Faith grounding</div>
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="py-20 bg-gray-50 text-center px-6">
+      <h2 class="text-3xl font-bold mb-8">Build: What You Walk Away With</h2>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div>Purpose-driven life</div>
+        <div>Confidence to lead</div>
+        <div>Resilience</div>
+        <div>Global mindset</div>
+        <div>Impact skills</div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10">What People Say</h2>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white shadow p-6 rounded-xl">
+          “It taught me to persevere.” — Latifah
+        </div>
+        <div class="bg-white shadow p-6 rounded-xl">
+          “It pushed me beyond limits.” — Dorcas
+        </div>
+        <div class="bg-white shadow p-6 rounded-xl">
+          “It changed how I see life.” — Mercy
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-[#10524e] text-white text-center px-6">
+      <h2 class="text-3xl font-bold mb-4">You Belong Here</h2>
+      <p class="mb-6">
+        Step into who you are becoming and build a life that matters.
+      </p>
+
+      <a
+        href="https://forms.gle/3Pper7goa6jmqhKX9"
+        class="bg-[#f05d31] px-6 py-3 rounded-full font-semibold"
+      >
+        Apply Now
+      </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 text-center text-sm">
+      <p>Let’s lead, love, and serve—together.</p>
+      <p>Email: joank@inspirespaces.org</p>
+      <p>Phone: +254708846363</p>
+    </footer>
+  </body>
+</html>
