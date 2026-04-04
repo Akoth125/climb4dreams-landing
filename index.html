@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Climb4Dreams - A transformative leadership journey where you find your place, grow into your purpose, and build a life that impacts the world."
+      content="Climb4Dreams - A transformative fellowship designed for the next generation of African leaders. Scale peaks, solve problems, and lead the ascent."
     />
 
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content="Climb4Dreams - Climb Towards Your Dreams"
+      content="Climb4Dreams - 12-Month Leadership Fellowship for Young Africans"
     />
     <meta
       property="og:description"
-      content="A transformative leadership journey where you find your place, grow into your purpose, and build a life that impacts the world."
+      content="Mountain expeditions, mentorship, and community impact projects. Join 200+ fellows transforming Africa."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/hero.png" />
@@ -24,11 +24,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Climb4Dreams - Climb Towards Your Dreams"
+      content="Climb4Dreams - Leadership Fellowship for Young Africans"
     />
     <meta
       name="twitter:description"
-      content="A transformative leadership journey where you find your place, grow into your purpose, and build a life that impacts the world."
+      content="12-month fellowship with mountain expeditions, mentorship, and community impact. Apply now!"
     />
 
     <title>Climb4Dreams</title>
@@ -37,76 +37,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Fonts -->
+    <!-- Fonts: Serif for headings, Sans for body text -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Liberation+Serif:wght@400&family=Tinos:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Custom Styles -->
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body class="bg-white text-gray-900">
+  <body>
     <!-- NAVBAR -->
-    <nav class="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-      <div class="w-full px-6 py-4 flex items-center justify-between">
+    <nav class="navbar">
+      <div class="navbar-inner">
         <!-- Logo -->
-        <a href="#" class="text-green-700 font-extrabold text-xl flex-shrink-0">
-          Climb4Dreams
-        </a>
+        <a href="#" class="navbar-logo">Climb4Dreams</a>
 
         <!-- Mobile menu button -->
         <button
           id="menuBtn"
-          class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500"
+          class="menu-btn"
           aria-label="Toggle navigation menu"
           aria-expanded="false"
         >
           <svg
-            class="w-6 h-6"
+            id="menuIcon"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              id="menuIcon"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+            data-icon="hamburger"
+          ></svg>
         </button>
 
-        <!-- Center links -->
-        <ul
-          id="navMenu"
-          class="hidden md:flex space-x-10 text-gray-700 uppercase font-medium tracking-wide"
-        >
-          <li>
-            <a href="#mission" class="hover:text-green-500 transition-colors"
-              >OUR MISSION</a
-            >
-          </li>
-          <li>
-            <a href="#fellows" class="hover:text-green-500 transition-colors"
-              >THE FELLOWS</a
-            >
-          </li>
-          <li>
-            <a href="#journey" class="hover:text-green-500 transition-colors"
-              >IMPACT</a
-            >
-          </li>
-          <li>
-            <a href="#impact" class="hover:text-green-500 transition-colors"
-              >CURRICULUM</a
-            >
-          </li>
+        <!-- Desktop menu -->
+        <ul class="navbar-menu">
+          <li><a href="#program">PROGRAM</a></li>
+          <li><a href="#fellows">FELLOWS</a></li>
+          <li><a href="#impact">IMPACT</a></li>
+          <li><a href="#eligibility">ELIGIBILITY</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
 
         <!-- Apply Now button -->
@@ -114,43 +83,26 @@
           href="https://forms.gle/3Pper7goa6jmqhKX9"
           target="_blank"
           rel="noopener noreferrer"
-          class="hidden md:block bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-2 rounded-full shadow-md transition-all duration-300"
+          class="navbar-cta"
         >
           Apply Now
         </a>
       </div>
 
       <!-- Mobile menu -->
-      <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-        <ul
-          class="flex flex-col px-6 py-4 space-y-4 text-gray-700 uppercase font-medium tracking-wide"
-        >
-          <li>
-            <a href="#mission" class="hover:text-green-500 transition-colors"
-              >OUR MISSION</a
-            >
-          </li>
-          <li>
-            <a href="#fellows" class="hover:text-green-500 transition-colors"
-              >THE FELLOWS</a
-            >
-          </li>
-          <li>
-            <a href="#journey" class="hover:text-green-500 transition-colors"
-              >IMPACT</a
-            >
-          </li>
-          <li>
-            <a href="#impact" class="hover:text-green-500 transition-colors"
-              >CURRICULUM</a
-            >
-          </li>
+      <div id="mobileMenu" class="mobile-menu">
+        <ul>
+          <li><a href="#program">PROGRAM</a></li>
+          <li><a href="#fellows">FELLOWS</a></li>
+          <li><a href="#impact">IMPACT</a></li>
+          <li><a href="#eligibility">ELIGIBILITY</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li>
             <a
               href="https://forms.gle/3Pper7goa6jmqhKX9"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-2 rounded-full shadow-md transition-all duration-300"
+              class="btn btn-secondary"
             >
               Apply Now
             </a>
@@ -160,37 +112,28 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero-section h-screen relative" role="banner">
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60"
-      ></div>
+    <section class="hero" role="banner">
+      <div class="hero-overlay"></div>
 
-      <div
-        class="relative flex items-center justify-left h-full text-white text-left px-8"
-      >
-        <div class="max-w-2xl">
-          <h1 class="mb-6 drop-shadow-lg">
-            <span
-              class="font-extrabold text-[4.2rem] md:text-[6rem] leading-none block"
-              >Climb Towards</span
-            >
-            <span
-              class="font-serif text-[5rem] md:text-[7rem] leading-none block"
-              >Your Dreams</span
-            >
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="hero-title-line1">Climb</span>
+            <span class="hero-title-line2">Toward</span>
+            <span class="hero-title-line3">Your Dreams</span>
           </h1>
 
-          <p class="mb-8 text-lg md:text-xl leading-relaxed drop-shadow-md">
-            A transformative leadership journey where you find your place, grow
-            into your purpose, and build a life that impacts the world.
+          <p class="hero-subtitle">
+            A transformative fellowship designed for the next generation of
+            African leaders. Scale peaks, solve problems, and lead the ascent.
           </p>
 
-          <div class="flex items-center gap-4">
+          <div class="hero-actions">
             <a
               href="https://forms.gle/3Pper7goa6jmqhKX9"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-orange-600 hover:bg-orange-500 transition-all duration-300 px-8 py-4 rounded-full font-semibold shadow-lg inline-block"
+              class="btn btn-primary"
             >
               Start Your Application
             </a>
@@ -198,154 +141,665 @@
               href="https://www.youtube.com/watch?v=GiDPiKOGUN8"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-sm md:text-base text-yellow-300 font-medium hover:text-yellow-200 transition-colors cursor-pointer"
+              class="btn-video"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M8 5v14l11-7z" />
-              </svg>
-              WATCH THE EXPEDITION
+              <div class="btn-video-circle">
+                <svg fill="currentColor" data-icon="play"></svg>
+              </div>
+              Watch the Expedition
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- IDENTITY -->
-    <section class="py-20 text-center px-6">
-      <h2 class="text-3xl font-bold mb-6">
-        You belong. You are becoming. You are building.
-      </h2>
+    <!-- THE JOURNEY OVERVIEW -->
+    <section class="section journey-section">
+      <div class="container">
+        <div class="journey-header">
+          <div class="journey-header-text">
+            <h2 class="section-title">The Journey <span>Overview</span></h2>
+            <p class="section-subtitle">
+              A transformative 12-month fellowship designed to develop the next
+              generation of African leaders.
+            </p>
+          </div>
+          <div class="journey-steps">
+            <div class="journey-step active">
+              <div class="journey-step-dot"></div>
+            </div>
+            <div class="journey-step">
+              <div class="journey-step-dot"></div>
+            </div>
+            <div class="journey-step">
+              <div class="journey-step-dot"></div>
+            </div>
+          </div>
+        </div>
 
-      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div><h3 class="text-xl font-semibold">Belong</h3></div>
-        <div><h3 class="text-xl font-semibold">Become</h3></div>
-        <div><h3 class="text-xl font-semibold">Build</h3></div>
+        <div class="journey-cards">
+          <!-- Belong Card -->
+          <div class="journey-card">
+            <div class="journey-card-number">01</div>
+            <h3 class="journey-card-title">Belong</h3>
+            <p class="journey-card-description">
+              Join a cohort of 25 peers and get matched with dedicated mentors
+              who invest in your growth.
+            </p>
+            <div class="journey-card-divider"></div>
+          </div>
+
+          <!-- Become Card (Featured) -->
+          <div class="journey-card featured">
+            <div class="journey-card-number">02</div>
+            <h3 class="journey-card-title">Become</h3>
+            <p class="journey-card-description">
+              Experience a 12-month structured growth journey with mountain
+              expeditions and leadership intensives.
+            </p>
+            <div class="journey-card-divider"></div>
+          </div>
+
+          <!-- Build Card -->
+          <div class="journey-card">
+            <div class="journey-card-number">03</div>
+            <h3 class="journey-card-title">Build</h3>
+            <p class="journey-card-description">
+              Launch a community impact project with seed funding and ongoing
+              mentor support.
+            </p>
+            <div class="journey-card-divider"></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- BELONG -->
-    <section
-      class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center"
-    >
-      <div>
-        <h2 class="text-3xl font-bold mb-4">Belong: You Are Not Alone</h2>
-        <p>
-          Climb4Dreams is a space where you are seen, known, and valued. Before
-          anything else, you belong.
+    <!-- BELONG COMMUNITY SECTION -->
+    <section class="section belong-section">
+      <div class="container">
+        <div class="belong-grid">
+          <!-- Image Column -->
+          <div class="belong-image-col">
+            <div class="belong-image-wrapper">
+              <div class="belong-image-blob"></div>
+              <div class="belong-image">
+                <img
+                  src="images/hero.png"
+                  alt="Diverse young leaders supporting each other on a mountain ridge"
+                />
+              </div>
+              <div class="belong-quote-card">
+                <p class="belong-quote-text">
+                  The journey begins on the legendary trails of Kilimanjaro.
+                  This isn't just a hike; it's a crucible where the 'Me' becomes
+                  'We'.
+                </p>
+                <span class="belong-quote-label">Community Impact</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="belong-content-col">
+            <h2 class="belong-title">Belong to a <span>Community</span></h2>
+
+            <div class="belong-stats">
+              <div class="belong-stat">
+                <span class="belong-stat-number">200+</span>
+                <span class="belong-stat-label">FELLOWS</span>
+              </div>
+              <div class="belong-stat-divider"></div>
+              <div class="belong-stat">
+                <span class="belong-stat-number">15</span>
+                <span class="belong-stat-label">COUNTRIES</span>
+              </div>
+              <div class="belong-stat-divider"></div>
+              <div class="belong-stat">
+                <span class="belong-stat-number">95%</span>
+                <span class="belong-stat-label">COMPLETION</span>
+              </div>
+            </div>
+
+            <p class="belong-description">
+              The journey begins on the legendary trails of Kilimanjaro. This
+              isn't just a hike; it's a crucible where the 'Me' becomes 'We'.
+            </p>
+
+            <ul class="belong-features">
+              <li>
+                <svg fill="currentColor" data-icon="check"></svg>
+                <span>Join a cohort of 25 peers from across Africa</span>
+              </li>
+              <li>
+                <svg fill="currentColor" data-icon="check"></svg>
+                <span>Get matched with 5 dedicated mentors for guidance</span>
+              </li>
+              <li>
+                <svg fill="currentColor" data-icon="check"></svg>
+                <span
+                  >Build lifelong connections through shared challenges</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BECOME (TRANSFORMATION) - MAWAZO HUB -->
+    <section class="section become-section">
+      <div class="container">
+        <div class="become-header">
+          <h2 class="become-title">Become</h2>
+          <p class="become-subtitle">Transformation</p>
+        </div>
+
+        <div class="become-grid">
+          <!-- Left Column: Seven Principles -->
+          <div class="become-principles">
+            <h3 class="become-principles-title">The Seven Principles</h3>
+            <div class="become-principles-list">
+              <div class="principle-item">
+                <span class="principle-number">01</span>
+                <span class="principle-text">Ubuntu</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-number">02</span>
+                <span class="principle-text">Resilience</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-number">03</span>
+                <span class="principle-text">Integrity</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-number">04</span>
+                <span class="principle-text">Innovation</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-number">05</span>
+                <span class="principle-text">Collaboration</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-number">06</span>
+                <span class="principle-text">Excellence</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-number">07</span>
+                <span class="principle-text">Service</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Project Card -->
+          <div class="become-project-card">
+            <div class="project-card-header">
+              <h4 class="project-card-title">Project Blueprint</h4>
+              <div class="project-card-icon">
+                <svg fill="currentColor" data-icon="lightning"></svg>
+              </div>
+            </div>
+
+            <div class="project-card-grid">
+              <!-- Idea Name -->
+              <div class="project-field accent">
+                <span class="project-field-label">Idea Name</span>
+                <h5 class="project-field-title">
+                  Defining the core identity of the impact project.
+                </h5>
+              </div>
+
+              <!-- Core Problem -->
+              <div class="project-field primary">
+                <span class="project-field-label">Core Problem</span>
+                <h5 class="project-field-title">
+                  Deep-dive into the societal challenge being addressed.
+                </h5>
+              </div>
+
+              <!-- Proposed Solution -->
+              <div class="project-field primary">
+                <span class="project-field-label">Proposed Solution</span>
+                <h5 class="project-field-title">
+                  The innovative mechanism for sustainable change.
+                </h5>
+              </div>
+
+              <!-- Impact Metric -->
+              <div class="project-field accent">
+                <span class="project-field-label">Impact Metric</span>
+                <h5 class="project-field-title">
+                  How we measure success in lives transformed.
+                </h5>
+              </div>
+            </div>
+
+            <div class="project-card-quote">
+              <p>
+                "Mawazo Hub is a collaborative think-tank where ideas are
+                transformed into impactful realities. It is where dreamers
+                become builders."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU WILL EXPERIENCE -->
+    <section class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">The C4D Experience</h2>
+          <div class="section-accent-line"></div>
+        </div>
+
+        <div class="experience-cards">
+          <!-- Row 1 -->
+          <div class="experience-card">
+            <div class="experience-icon">
+              <svg fill="currentColor" data-icon="users"></svg>
+            </div>
+            <h3 class="experience-title">Community service projects</h3>
+            <p class="experience-description">
+              Launch and lead real community impact projects with seed funding
+              and mentor support.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-icon">
+              <svg fill="currentColor" data-icon="lightning"></svg>
+            </div>
+            <h3 class="experience-title">Leadership workshops</h3>
+            <p class="experience-description">
+              Weekly sessions on leadership, problem-solving, and personal
+              development.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-icon">
+              <svg fill="currentColor" data-icon="building"></svg>
+            </div>
+            <h3 class="experience-title">Mountain expedition</h3>
+            <p class="experience-description">
+              A transformative 7-day climb that pushes your limits and builds
+              resilience.
+            </p>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="experience-card">
+            <div class="experience-icon">
+              <svg fill="currentColor" data-icon="checkCircle"></svg>
+            </div>
+            <h3 class="experience-title">Mentorship program</h3>
+            <p class="experience-description">
+              One-on-one guidance from experienced leaders who've walked the
+              path before you.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-icon">
+              <svg fill="currentColor" data-icon="star"></svg>
+            </div>
+            <h3 class="experience-title">Impact projects</h3>
+            <p class="experience-description">
+              Design and implement sustainable solutions for real community
+              challenges.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-icon">
+              <svg fill="currentColor" data-icon="arrow"></svg>
+            </div>
+            <h3 class="experience-title">Summit celebration</h3>
+            <p class="experience-description">
+              Cap your journey with a graduation ceremony celebrating your
+              transformation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section class="section timeline-section">
+      <div class="container">
+        <div class="timeline-grid-new">
+          <!-- Content Column -->
+          <div class="timeline-content">
+            <h2 class="timeline-title">Your 12-Month <span>Journey</span></h2>
+
+            <div class="timeline-items">
+              <div class="timeline-item">
+                <span class="timeline-item-number">01</span>
+                <div class="timeline-item-content">
+                  <h4 class="timeline-item-title">Foundation Phase</h4>
+                  <p class="timeline-item-desc">
+                    Weekly virtual sessions, mentor matching, and goal-setting
+                    exercises.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-item-number">02</span>
+                <div class="timeline-item-content">
+                  <h4 class="timeline-item-title">Expedition Phase</h4>
+                  <p class="timeline-item-desc">
+                    7-day mountain climb with daily leadership workshops and
+                    team challenges.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-item-number">03</span>
+                <div class="timeline-item-content">
+                  <h4 class="timeline-item-title">Impact Phase</h4>
+                  <p class="timeline-item-desc">
+                    Launch your community project with seed funding and ongoing
+                    mentor support.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-item-number">04</span>
+                <div class="timeline-item-content">
+                  <h4 class="timeline-item-title">Graduation</h4>
+                  <p class="timeline-item-desc">
+                    Join the alumni network with lifetime access to resources
+                    and opportunities.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-item-number">05</span>
+                <div class="timeline-item-content">
+                  <h4 class="timeline-item-title">Alumni Network</h4>
+                  <p class="timeline-item-desc">
+                    Continue your journey as a mentor and leader in the
+                    community.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Images Column -->
+          <div class="timeline-images">
+            <div class="timeline-image-row">
+              <div class="timeline-image timeline-image-1">
+                <img
+                  src="images/hero.png"
+                  alt="Confident young African woman leader"
+                />
+              </div>
+              <div class="timeline-image timeline-image-2">
+                <img
+                  src="images/hero.png"
+                  alt="African landscape with rolling hills"
+                />
+              </div>
+            </div>
+            <div class="timeline-image-row">
+              <div class="timeline-image timeline-image-3">
+                <img
+                  src="images/hero.png"
+                  alt="Mt Kilimanjaro summit at dusk"
+                />
+              </div>
+              <div class="timeline-image timeline-image-4">
+                <img
+                  src="images/hero.png"
+                  alt="Students working together on a project"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICES OF THE EXPEDITION -->
+    <section class="section voices-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Voices of the Expedition</h2>
+          <p class="voices-subtitle">Real stories from the previous cohorts</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <svg fill="currentColor" data-icon="quote"></svg>
+            </div>
+            <p class="testimonial-quote">
+              "It taught me to persevere and to appreciate every milestone."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <svg fill="currentColor" data-icon="user"></svg>
+              </div>
+              <div class="testimonial-info">
+                <span class="testimonial-name">Latifah</span>
+                <span class="testimonial-role">Fellow '24</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <svg fill="currentColor" data-icon="quote"></svg>
+            </div>
+            <p class="testimonial-quote">
+              "It pushed me beyond my limits and gave me hope."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <svg fill="currentColor" data-icon="user"></svg>
+              </div>
+              <div class="testimonial-info">
+                <span class="testimonial-name">Dorcas</span>
+                <span class="testimonial-role">Fellow '25</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <svg fill="currentColor" data-icon="quote"></svg>
+            </div>
+            <p class="testimonial-quote">"It changed how I see life."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <svg fill="currentColor" data-icon="user"></svg>
+              </div>
+              <div class="testimonial-info">
+                <span class="testimonial-name">Mercy</span>
+                <span class="testimonial-role">Fellow '25</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt">
+      <div class="container container-sm">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>Is there a cost to participate?</h3>
+              <svg fill="none" stroke="currentColor" data-icon="chevron"></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No! Climb4Dreams is fully funded. No application or program
+                fees. We cover expedition costs including travel, gear, and
+                accommodation.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>What is the time commitment?</h3>
+              <svg fill="none" stroke="currentColor" data-icon="chevron"></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                About 10 hours per month for virtual sessions, mentor meetings,
+                and assignments. The 7-day expedition requires taking time off.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>Where does the expedition take place?</h3>
+              <svg fill="none" stroke="currentColor" data-icon="chevron"></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Expeditions alternate between Mt. Kenya (Kenya) and Mt.
+                Kilimanjaro (Tanzania). All costs covered. No climbing
+                experience needed—we provide training.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>What happens after graduation?</h3>
+              <svg fill="none" stroke="currentColor" data-icon="chevron"></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                You join our alumni network with lifetime access to the
+                community, annual reunions, job board, and continued learning.
+                Many alumni return as mentors.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>Can I apply if I'm working full-time?</h3>
+              <svg fill="none" stroke="currentColor" data-icon="chevron"></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes! Many fellows balance work with the program. You'll need to
+                arrange time off for the 7-day expedition—many employers support
+                this as professional development.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-section">
+      <div class="cta-blob-left"></div>
+      <div class="cta-blob-right"></div>
+      <div class="container container-sm">
+        <h2 class="cta-title">
+          <span class="cta-title-line1">You Belong</span>
+          <span class="cta-title-line2">Here</span>
+        </h2>
+        <p class="cta-subtitle">
+          Apply to be part of the next cohort. Don't wait for the path to be
+          cleared. Create it.
         </p>
-      </div>
 
-      <img
-        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac"
-        alt="Community of young leaders gathered together"
-        loading="lazy"
-        class="rounded-xl"
-      />
-    </section>
-
-    <!-- JOURNEY -->
-    <section class="py-20 bg-gray-50 text-center px-6">
-      <h2 class="text-3xl font-bold mb-10">Become: The Journey</h2>
-
-      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div>
-          <h3 class="font-semibold mb-2">Prepare</h3>
-          <p>Build discipline and clarity.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2">Stretch</h3>
-          <p>Challenge your limits.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2">Transform</h3>
-          <p>Become stronger and confident.</p>
+        <div class="cta-actions">
+          <a
+            href="https://forms.gle/3Pper7goa6jmqhKX9"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            Apply Now
+          </a>
+          <a href="mailto:joank@inspirespaces.org" class="btn btn-outline">
+            Contact Us
+          </a>
         </div>
       </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="py-20 px-6 text-center">
-      <h2 class="text-3xl font-bold mb-8">What You Will Experience</h2>
-
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <div>Mountain expeditions</div>
-        <div>Leadership training</div>
-        <div>Mawazo Hub sessions</div>
-        <div>Cultural immersion</div>
-        <div>Community service</div>
-        <div>Faith grounding</div>
-      </div>
-    </section>
-
-    <!-- OUTCOMES -->
-    <section class="py-20 bg-gray-50 text-center px-6">
-      <h2 class="text-3xl font-bold mb-8">Build: What You Walk Away With</h2>
-
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <div>Purpose-driven life</div>
-        <div>Confidence to lead</div>
-        <div>Resilience</div>
-        <div>Global mindset</div>
-        <div>Impact skills</div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="py-20 px-6 text-center">
-      <h2 class="text-3xl font-bold mb-10">What People Say</h2>
-
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <div class="bg-white shadow p-6 rounded-xl">
-          “It taught me to persevere.” — Latifah
-        </div>
-        <div class="bg-white shadow p-6 rounded-xl">
-          “It pushed me beyond limits.” — Dorcas
-        </div>
-        <div class="bg-white shadow p-6 rounded-xl">
-          “It changed how I see life.” — Mercy
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-20 bg-emerald-900 text-white text-center px-6">
-      <h2 class="text-3xl font-bold mb-4">You Belong Here</h2>
-      <p class="mb-6">
-        Step into who you are becoming and build a life that matters.
-      </p>
-
-      <a
-        href="https://forms.gle/3Pper7goa6jmqhKX9"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-orange-600 hover:bg-orange-700 transition-colors px-6 py-3 rounded-full font-semibold"
-      >
-        Apply Now
-      </a>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-10 text-center text-sm bg-gray-50">
-      <p>Let’s lead, love, and serve—together.</p>
-      <p>
-        Email:
-        <a
-          href="mailto:joank@inspirespaces.org"
-          class="text-green-700 hover:underline"
-          >joank@inspirespaces.org</a
-        >
-      </p>
-      <p>
-        Phone:
-        <a href="tel:+254708846363" class="text-green-700 hover:underline"
-          >+254708846363</a
-        >
-      </p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>Climb4Dreams</h3>
+            <p>
+              A transformational leadership journey designed to shape, stretch,
+              and empower the next generation of African leaders. Through a
+              powerful blend of outdoor adventure, cultural immersion,
+              international training, and community, we develop leaders who are
+              grounded in purpose, courageous in action, and committed to
+              impact.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#faq">FAQ</a></li>
+              <li>
+                <a
+                  href="https://www.youtube.com/watch?v=GiDPiKOGUN8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Video</a
+                >
+              </li>
+              <li><a href="mailto:joank@inspirespaces.org">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <ul class="footer-contact">
+              <li>
+                <a href="mailto:joank@inspirespaces.org">
+                  <svg fill="currentColor" data-icon="email"></svg>
+                  joank@inspirespaces.org
+                </a>
+              </li>
+              <li>
+                <a href="tel:+254708846363">
+                  <svg fill="currentColor" data-icon="phone"></svg>
+                  +254 708 846 363
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Climb4Dreams. All rights reserved.</p>
+          <p>Let's lead, love, and serve—together.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
