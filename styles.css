@@ -2446,3 +2446,521 @@ ol {
     line-height: 28px;
   }
 }
+
+/* ========================================
+   Mobile Responsive Optimizations
+   ======================================== */
+
+/* Tablet and below (768px) */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 80px;
+    --container-padding: 24px;
+    --navbar-height: 72px;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: auto;
+    padding: 120px 24px 80px;
+  }
+
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-title-line3 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-video {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* Journey Cards - Stack vertically */
+  .journey-cards {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+
+  .journey-card {
+    height: auto;
+    min-height: 280px;
+    padding: 32px 24px;
+  }
+
+  .journey-card:nth-child(2) {
+    margin-top: 0;
+    height: auto;
+  }
+
+  .journey-card-number {
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 24px;
+  }
+
+  .journey-card-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .journey-card-description {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  /* Belong Section */
+  .belong-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .belong-title {
+    font-size: 32px;
+    line-height: 40px;
+    height: auto;
+  }
+
+  .belong-title span {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .belong-stats {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .belong-stat {
+    width: 100%;
+  }
+
+  .belong-quote-card {
+    position: relative;
+    margin-top: 24px;
+    left: 0;
+    bottom: 0;
+  }
+
+  /* Become Section */
+  .become-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .become-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .principle-card {
+    padding: 20px 16px;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+
+  /* Experience Section */
+  .experience-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .experience-card {
+    padding: 24px;
+  }
+
+  .experience-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  /* Timeline Section */
+  .timeline-grid-new {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .timeline-card {
+    padding: 24px;
+  }
+
+  .timeline-image {
+    height: 200px;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    padding: 24px;
+  }
+
+  .testimonial-quote {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 80px 24px;
+  }
+
+  .cta-title {
+    font-size: 36px;
+    line-height: 44px;
+    flex-direction: column;
+  }
+
+  .cta-title-line1,
+  .cta-title-line2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .cta-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 48px 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    gap: 12px;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary {
+    padding: 16px 32px;
+    font-size: 13px;
+  }
+
+  .btn-outline {
+    padding: 16px 32px;
+    font-size: 13px;
+  }
+}
+
+/* Small mobile (480px) */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 60px;
+    --container-padding: 16px;
+    --navbar-height: 64px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 100px 16px 60px;
+  }
+
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-title-line3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Journey Cards */
+  .journey-card {
+    min-height: 240px;
+    padding: 24px 20px;
+  }
+
+  .journey-card-number {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  .journey-card-title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .journey-card-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Belong Section */
+  .belong-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .belong-title span {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .belong-stat-number {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .belong-quote-card {
+    padding: 20px;
+  }
+
+  .belong-quote-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Become Section */
+  .become-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .principle-number {
+    font-size: 14px;
+  }
+
+  .principle-title {
+    font-size: 14px;
+  }
+
+  .project-field-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Experience */
+  .experience-card {
+    padding: 20px;
+  }
+
+  .experience-title {
+    font-size: 16px;
+  }
+
+  .experience-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Timeline */
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .timeline-title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .timeline-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .timeline-image {
+    height: 160px;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-quote {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .testimonial-name {
+    font-size: 14px;
+  }
+
+  .testimonial-role {
+    font-size: 12px;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 60px 16px;
+  }
+
+  .cta-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .cta-title-line1,
+  .cta-title-line2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .cta-subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 16px;
+  }
+
+  .footer-brand h3 {
+    font-size: 16px;
+  }
+
+  .footer-brand p {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .footer-column h4 {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul {
+    font-size: 12px;
+  }
+
+  .footer-contact a {
+    font-size: 12px;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    padding: 14px 24px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+  }
+
+  .mobile-menu-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Extra small mobile (320px) */
+@media (max-width: 320px) {
+  :root {
+    --section-padding: 48px;
+    --container-padding: 12px;
+  }
+
+  .hero-title-line1,
+  .hero-title-line2,
+  .hero-title-line3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .cta-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .cta-title-line1,
+  .cta-title-line2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .journey-card-number {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .belong-stat-number {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
