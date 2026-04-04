@@ -1,0 +1,29 @@
+{
+  "name": "climb4dreams-landing",
+  "version": "1.0.0",
+  "description": "Climb4Dreams - A transformative fellowship designed for the next generation of African leaders",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"No tests configured\" && exit 0",
+    "dev": "echo \"Development server not configured for static site\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akoth125/climb4dreams-landing.git"
+  },
+  "keywords": [
+    "climb4dreams",
+    "fellowship",
+    "leadership"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akoth125/climb4dreams-landing/issues"
+  },
+  "homepage": "https://github.com/Akoth125/climb4dreams-landing#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
