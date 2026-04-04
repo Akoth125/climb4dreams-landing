@@ -1,0 +1,53 @@
+/* CSS Custom Properties */
+:root {
+  --color-primary: #15803d;
+  --color-primary-hover: #16a34a;
+  --color-accent: #ea580c;
+  --color-accent-hover: #f97316;
+  --navbar-height: 80px;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hero background */
+.hero-section {
+  background-image: url("images/hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mobile menu animation */
+#mobileMenu {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  pointer-events: none;
+}
+
+#mobileMenu.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
