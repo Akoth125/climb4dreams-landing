@@ -1,23 +1,13 @@
 /**
  * Climb4Dreams Landing Page Scripts
- *
- * Features:
- * - SVG icon injection system (avoids inline SVG repetition)
- * - Mobile menu toggle with accessibility support
- *
- * Dependencies: None (vanilla JS)
+ * Features: SVG icon injection, mobile menu, scroll animations
  */
 
 // ========================================
 // SVG ICON SYSTEM
-// Centralized icon definitions for DRY code
 // ========================================
 
-/*
- * Icon path definitions
- * Each icon has a path and viewBox size
- * Usage: <svg data-icon="check"></svg>
- */
+// Icon path definitions - usage: <svg data-icon="check"></svg>
 const ICONS = {
   check:
     '<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>',
@@ -43,86 +33,76 @@ const ICONS = {
     '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" fill="none" stroke="currentColor"/>',
   lightning:
     '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" fill="none" stroke="currentColor"/>',
+  bulb: '<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>',
+  church:
+    '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1v3m-2-1h4M12 4l4 4H8l4-4zM6 22V12h2V8h8v4h2v10H6zm4-10v6m4-6v6" fill="none" stroke="currentColor"/>',
+  mountain:
+    '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 21L7 9l4 6 5-10 7 16H1z" fill="none" stroke="currentColor"/>',
+  world:
+    '<circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" fill="none" stroke="currentColor"/>',
+  mind: '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="14" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="14" r="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-width="2" d="M12 10v2M10 13l-1 1m6-1l1 1" fill="none" stroke="currentColor"/>',
+  leadership:
+    '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z" fill="none" stroke="currentColor"/>',
   building:
     '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" fill="none" stroke="currentColor"/>',
   quote:
     '<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.459l.995 2.126c-4.432 1.175-7.359 4.536-7.359 8.333V21h-2.619zm-6.017 0v-7.391c0-5.704 3.731-9.57 8.983-10.459l.995 2.126c-4.432 1.175-7.359 4.536-7.359 8.333V21h-2.619z" fill="currentColor"/>',
 };
 
-// Viewbox sizes for each icon (determines SVG coordinate system)
+// ViewBox sizes grouped by size
 const VIEWBOX = {
-  check: "0 0 20 20",
-  user: "0 0 20 20",
-  chevron: "0 0 24 24",
-  arrow: "0 0 24 24",
-  play: "0 0 24 24",
-  checkCircle: "0 0 20 20",
-  star: "0 0 20 20",
-  info: "0 0 20 20",
-  email: "0 0 20 20",
-  phone: "0 0 20 20",
-  hamburger: "0 0 24 24",
-  close: "0 0 24 24",
-  users: "0 0 24 24",
-  lightning: "0 0 24 24",
-  building: "0 0 24 24",
-  quote: "0 0 24 24",
+  small: "0 0 20 20", // check, user, checkCircle, star, info, email, phone
+  large: "0 0 24 24", // all others
 };
 
-/**
- * Inject SVG icons into placeholders
- * Finds all [data-icon] elements and replaces with SVG content
- * Supports custom fill/stroke via data attributes
- */
+const SMALL_ICONS = [
+  "check",
+  "user",
+  "checkCircle",
+  "star",
+  "info",
+  "email",
+  "phone",
+];
+
+function getViewBox(iconName) {
+  return SMALL_ICONS.includes(iconName) ? VIEWBOX.small : VIEWBOX.large;
+}
+
 function injectIcons() {
   document.querySelectorAll("[data-icon]").forEach((el) => {
     const iconName = el.dataset.icon;
     if (ICONS[iconName]) {
-      const fill = el.dataset.fill || "currentColor";
-      const stroke = el.dataset.stroke || "currentColor";
       el.innerHTML = ICONS[iconName];
-      el.setAttribute("viewBox", VIEWBOX[iconName]);
-      if (fill !== "currentColor") el.setAttribute("fill", fill);
-      if (stroke !== "currentColor") el.setAttribute("stroke", stroke);
+      el.setAttribute("viewBox", getViewBox(iconName));
     }
   });
 }
 
 // ========================================
 // MOBILE MENU
-// Toggle with accessibility support (ARIA, keyboard)
 // ========================================
 
-// DOM references for mobile menu
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 const menuIcon = document.getElementById("menuIcon");
 
-/**
- * Toggle mobile menu open/closed
- * Updates ARIA attributes and swaps hamburger/close icon
- * @param {boolean} open - Whether to open the menu
- */
 function toggleMenu(open) {
   menuBtn.setAttribute("aria-expanded", open);
   mobileMenu.classList.toggle("hidden", !open);
   mobileMenu.classList.toggle("active", open);
   menuIcon.innerHTML = open ? ICONS.close : ICONS.hamburger;
-  menuIcon.setAttribute("viewBox", "0 0 24 24");
+  menuIcon.setAttribute("viewBox", VIEWBOX.large);
 }
 
-// Click handler: toggle menu state
 menuBtn.addEventListener("click", () => {
-  const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
-  toggleMenu(!isExpanded);
+  toggleMenu(menuBtn.getAttribute("aria-expanded") !== "true");
 });
 
-// Close menu when clicking navigation links
 mobileMenu.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => toggleMenu(false));
 });
 
-// Keyboard accessibility: close on Escape key
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && menuBtn.getAttribute("aria-expanded") === "true") {
     toggleMenu(false);
@@ -130,7 +110,143 @@ document.addEventListener("keydown", (e) => {
 });
 
 // ========================================
-// INITIALIZATION
-// Run on DOM ready
+// INTERSECTION OBSERVER UTILITIES
 // ========================================
-document.addEventListener("DOMContentLoaded", injectIcons);
+
+function createObserver(callback, options = {}) {
+  return new IntersectionObserver(callback, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+    ...options,
+  });
+}
+
+function observeElements(selector, callback, options = {}) {
+  const observer = createObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        callback(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  document.querySelectorAll(selector).forEach((el) => observer.observe(el));
+}
+
+// ========================================
+// SCROLL ANIMATIONS
+// ========================================
+
+function initScrollAnimations() {
+  const selectors = [
+    ".animate-on-scroll",
+    ".animate-scale",
+    ".animate-from-left",
+    ".animate-from-right",
+    ".journey-card",
+    ".experience-card",
+    ".testimonial-card",
+    ".timeline-item",
+    ".principle-item",
+  ];
+
+  observeElements(selectors.join(", "), (el) => el.classList.add("visible"), {
+    rootMargin: "0px 0px -50px 0px",
+  });
+}
+
+// ========================================
+// PARALLAX EFFECT
+// ========================================
+
+function initParallax() {
+  const hero = document.querySelector(".hero");
+  if (!hero) return;
+
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrolled = window.pageYOffset;
+        if (scrolled < hero.offsetHeight) {
+          hero.style.backgroundPositionY = `calc(50% + ${scrolled * 0.3}px)`;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+}
+
+// ========================================
+// COUNTER ANIMATION
+// ========================================
+
+function animateCounter(element, target, duration = 2000) {
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const progress = Math.min((currentTime - startTime) / duration, 1);
+    const easeOut = 1 - Math.pow(1 - progress, 3);
+    element.textContent = Math.floor(target * easeOut).toLocaleString();
+
+    if (progress < 1) requestAnimationFrame(update);
+  }
+
+  requestAnimationFrame(update);
+}
+
+function initCounterAnimations() {
+  observeElements(
+    "[data-counter]",
+    (el) => animateCounter(el, parseInt(el.dataset.counter, 10)),
+    { threshold: 0.5 },
+  );
+}
+
+// ========================================
+// SECTION REVEALS
+// ========================================
+
+function initSectionReveals() {
+  const observer = createObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("section-visible");
+      });
+    },
+    { threshold: 0.05 },
+  );
+
+  document.querySelectorAll(".section").forEach((section) => {
+    section.classList.add("section-animate");
+    observer.observe(section);
+  });
+}
+
+// ========================================
+// FAQ ACCORDION
+// ========================================
+
+function initFAQ() {
+  document.querySelectorAll(".faq-item").forEach((faq) => {
+    faq.querySelector(".faq-question")?.addEventListener("click", () => {
+      faq.classList.toggle("active");
+    });
+  });
+}
+
+// ========================================
+// INITIALIZATION
+// ========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  injectIcons();
+  initScrollAnimations();
+  initParallax();
+  initCounterAnimations();
+  initSectionReveals();
+  initFAQ();
+});
