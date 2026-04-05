@@ -1969,9 +1969,9 @@ ol {
   .timeline-image-2,
   .timeline-image-3,
   .timeline-image-4 {
-    aspect-ratio: auto;
-    margin-top: 0;
-    height: 200px;
+    aspect-ratio: auto !important;
+    margin-top: 0 !important;
+    height: 200px !important;
     min-height: 200px;
   }
 
@@ -1983,6 +1983,7 @@ ol {
     height: 200px !important;
     width: 100%;
     object-fit: cover;
+    display: block;
   }
 }
 
@@ -2398,6 +2399,7 @@ ol {
 
   .timeline-image {
     height: 200px;
+    min-height: 200px;
   }
 
   /* Reset all timeline images for mobile layout */
@@ -2405,9 +2407,10 @@ ol {
   .timeline-image-2,
   .timeline-image-3,
   .timeline-image-4 {
-    aspect-ratio: auto;
-    margin-top: 0;
+    aspect-ratio: auto !important;
+    margin-top: 0 !important;
     height: 200px;
+    min-height: 200px;
   }
 
   .timeline-image img,
@@ -2416,6 +2419,9 @@ ol {
   .timeline-image-3 img,
   .timeline-image-4 img {
     height: 200px !important;
+    width: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   /* Testimonials */
@@ -2626,6 +2632,7 @@ ol {
 
   .timeline-image {
     height: 160px;
+    min-height: 160px;
   }
 
   /* Reset all timeline images for mobile layout */
@@ -2636,6 +2643,7 @@ ol {
     aspect-ratio: auto;
     margin-top: 0;
     height: 160px;
+    min-height: 160px;
   }
 
   .timeline-image img,
@@ -2644,6 +2652,9 @@ ol {
   .timeline-image-3 img,
   .timeline-image-4 img {
     height: 160px !important;
+    width: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   /* Testimonials */
