@@ -2373,6 +2373,22 @@ ol {
     height: 200px;
   }
 
+  /* Reset all timeline images for mobile layout */
+  .timeline-image-1,
+  .timeline-image-2,
+  .timeline-image-3,
+  .timeline-image-4 {
+    aspect-ratio: auto;
+    margin-top: 0;
+  }
+
+  .timeline-image-1 img,
+  .timeline-image-2 img,
+  .timeline-image-3 img,
+  .timeline-image-4 img {
+    height: 200px;
+  }
+
   /* Testimonials */
   .testimonials-grid {
     grid-template-columns: 1fr;
@@ -2580,6 +2596,22 @@ ol {
   }
 
   .timeline-image {
+    height: 160px;
+  }
+
+  /* Reset all timeline images for mobile layout */
+  .timeline-image-1,
+  .timeline-image-2,
+  .timeline-image-3,
+  .timeline-image-4 {
+    aspect-ratio: auto;
+    margin-top: 0;
+  }
+
+  .timeline-image-1 img,
+  .timeline-image-2 img,
+  .timeline-image-3 img,
+  .timeline-image-4 img {
     height: 160px;
   }
 
