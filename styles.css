@@ -2380,13 +2380,15 @@ ol {
   .timeline-image-4 {
     aspect-ratio: auto;
     margin-top: 0;
+    height: 200px;
   }
 
+  .timeline-image img,
   .timeline-image-1 img,
   .timeline-image-2 img,
   .timeline-image-3 img,
   .timeline-image-4 img {
-    height: 200px;
+    height: 200px !important;
   }
 
   /* Testimonials */
@@ -2606,13 +2608,15 @@ ol {
   .timeline-image-4 {
     aspect-ratio: auto;
     margin-top: 0;
+    height: 160px;
   }
 
+  .timeline-image img,
   .timeline-image-1 img,
   .timeline-image-2 img,
   .timeline-image-3 img,
   .timeline-image-4 img {
-    height: 160px;
+    height: 160px !important;
   }
 
   /* Testimonials */
