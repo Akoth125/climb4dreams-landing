@@ -14,13 +14,13 @@
 
 :root {
   /* === Primary Colors === */
-  --color-primary: #012d1d; /* Dark green - main brand color */
+  --color-primary: #10524e; /* Dark green - main brand color */
   --color-primary-80: rgba(1, 45, 29, 0.8);
   --color-primary-10: rgba(1, 45, 29, 0.1);
   --color-primary-05: rgba(1, 45, 29, 0.05);
 
   /* === Accent Colors === */
-  --color-accent: #a23f00; /* Brown-orange for emphasis */
+  --color-accent: #f05d31; /* Brown-orange for emphasis */
   --color-accent-20: rgba(162, 63, 0, 0.2);
   --color-accent-05: rgba(162, 63, 0, 0.05);
   --color-accent-button: #fd7b39; /* Bright orange for CTAs */
