@@ -19,8 +19,6 @@ const ICONS = {
     '<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>',
   phone:
     '<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>',
-  hamburger:
-    '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor"/>',
   close:
     '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" fill="none" stroke="currentColor"/>',
   users:
@@ -54,36 +52,6 @@ function injectIcons() {
     }
   });
 }
-
-// ========================================
-// MOBILE MENU
-// ========================================
-
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const menuIcon = document.getElementById("menuIcon");
-
-function toggleMenu(open) {
-  menuBtn.setAttribute("aria-expanded", open);
-  mobileMenu.classList.toggle("hidden", !open);
-  mobileMenu.classList.toggle("active", open);
-  menuIcon.innerHTML = open ? ICONS.close : ICONS.hamburger;
-  menuIcon.setAttribute("viewBox", VIEWBOX.large);
-}
-
-menuBtn.addEventListener("click", () => {
-  toggleMenu(menuBtn.getAttribute("aria-expanded") !== "true");
-});
-
-mobileMenu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => toggleMenu(false));
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && menuBtn.getAttribute("aria-expanded") === "true") {
-    toggleMenu(false);
-  }
-});
 
 // ========================================
 // INTERSECTION OBSERVER UTILITIES
@@ -175,6 +143,75 @@ function initSectionReveals() {
     observer.observe(section);
   });
 }
+
+// ========================================
+// VIDEO MODAL
+// ========================================
+
+const VIDEO_URL =
+  "https://www.youtube.com/embed/GiDPiKOGUN8?si=OSZhiQRziMV17H4H&autoplay=1";
+
+const videoBtn = document.getElementById("videoBtn");
+const videoModal = document.getElementById("videoModal");
+const videoModalBackdrop = document.getElementById("videoModalBackdrop");
+const videoModalClose = document.getElementById("videoModalClose");
+const videoFrame = document.getElementById("videoFrame");
+const videoPoster = document.getElementById("videoPoster");
+
+function openVideoModal() {
+  videoModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeVideoModal() {
+  videoModal.classList.remove("active");
+  document.body.style.overflow = "";
+  // Reset to poster state
+  setTimeout(() => {
+    videoFrame.src = "";
+    videoFrame.classList.remove("loaded");
+    if (videoPoster) videoPoster.classList.remove("hidden");
+  }, 300);
+}
+
+function playVideo() {
+  if (videoPoster) videoPoster.classList.add("hidden");
+  videoFrame.src = VIDEO_URL;
+  videoFrame.addEventListener(
+    "load",
+    function onLoad() {
+      videoFrame.classList.add("loaded");
+      videoFrame.removeEventListener("load", onLoad);
+    },
+    { once: true },
+  );
+}
+
+if (videoBtn) {
+  videoBtn.addEventListener("click", openVideoModal);
+}
+
+if (videoPoster) {
+  videoPoster.addEventListener("click", playVideo);
+}
+
+if (videoModalBackdrop) {
+  videoModalBackdrop.addEventListener("click", closeVideoModal);
+}
+
+if (videoModalClose) {
+  videoModalClose.addEventListener("click", closeVideoModal);
+}
+
+document.addEventListener("keydown", (e) => {
+  if (
+    e.key === "Escape" &&
+    videoModal &&
+    videoModal.classList.contains("active")
+  ) {
+    closeVideoModal();
+  }
+});
 
 // ========================================
 // INITIALIZATION

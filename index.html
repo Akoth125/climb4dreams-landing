@@ -40,22 +40,6 @@
           Climb4Dreams
         </a>
 
-        <!-- Mobile menu button -->
-        <button
-          id="menuBtn"
-          class="menu-btn"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <svg
-            id="menuIcon"
-            fill="none"
-            stroke="currentColor"
-            data-icon="hamburger"
-            viewBox="0 0 24 24"
-          ></svg>
-        </button>
-
         <!-- Apply Now button -->
         <a
           href="https://forms.gle/3Pper7goa6jmqhKX9"
@@ -65,17 +49,6 @@
         >
           Apply Now
         </a>
-      </div>
-
-      <!-- Mobile menu -->
-      <div id="mobileMenu" class="mobile-menu">
-        <a
-          href="https://forms.gle/3Pper7goa6jmqhKX9"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-secondary"
-          >Apply Now</a
-        >
       </div>
     </nav>
 
@@ -106,17 +79,12 @@
             >
               Start Your Application
             </a>
-            <a
-              href="https://www.youtube.com/watch?v=GiDPiKOGUN8"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-video"
-            >
+            <button class="btn-video" id="videoBtn" type="button">
               <div class="btn-video-circle">
                 <svg fill="currentColor" data-icon="play"></svg>
               </div>
               Watch the Expedition
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -737,6 +705,52 @@
         </div>
       </div>
     </footer>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+      <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
+      <div class="video-modal-content">
+        <button
+          class="video-modal-close"
+          id="videoModalClose"
+          aria-label="Close video"
+        >
+          <svg fill="none" stroke="currentColor" data-icon="close"></svg>
+        </button>
+        <div class="video-modal-wrapper">
+          <div class="video-poster" id="videoPoster">
+            <img
+              src="https://img.youtube.com/vi/GiDPiKOGUN8/maxresdefault.jpg"
+              alt="Video thumbnail"
+              loading="lazy"
+            />
+            <div class="video-poster-play">
+              <svg fill="currentColor" data-icon="play"></svg>
+            </div>
+          </div>
+          <iframe
+            id="videoFrame"
+            width="560"
+            height="315"
+            src=""
+            title="Climb4Dreams Expedition Video"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
