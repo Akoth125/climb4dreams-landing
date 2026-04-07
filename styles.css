@@ -57,11 +57,11 @@
     "Noto Serif", serif; /* Italic/alternate headings - fallback to Noto Serif */
   --font-serif-italic: "Tinos", serif; /* Logo and accents */
   --font-sans: "Plus Jakarta Sans", sans-serif; /* Body text */
-  --font-sans-alt: "Nimbus Sans", sans-serif; /* Navigation labels */
+  --font-sans-alt: "Plus Jakarta Sans", sans-serif; /* Navigation labels */
 
   /* === Spacing Scale === */
   --navbar-height: 88px;
-  --section-padding: 128px; /* Vertical section spacing */
+  --section-padding: 80px; /* Vertical section spacing */
   --container-padding: 48px; /* Horizontal container padding */
   --max-width: 1280px; /* Max content width */
 
@@ -200,10 +200,6 @@ ol {
   height: 28px;
 }
 
-.navbar-logo:hover {
-  color: var(--color-primary);
-}
-
 .navbar-cta {
   background-color: var(--color-primary);
   color: var(--color-text-white);
@@ -216,10 +212,6 @@ ol {
   padding: 12px 32px;
   border-radius: var(--radius-full);
   transition: background-color 0.3s;
-}
-
-.navbar-cta:hover {
-  background-color: var(--color-primary);
 }
 
 /* Desktop styles */
@@ -430,6 +422,7 @@ ol {
 .hero-title-line3 {
   font-family: var(--font-serif-alt);
   font-weight: 400;
+  font-style: italic;
 }
 
 .hero-subtitle {
@@ -510,12 +503,6 @@ ol {
 
 /* Hero responsive */
 @media (max-width: 768px) {
-  .hero-title-line1,
-  .hero-title-line2 {
-    font-size: 48px;
-    line-height: 48px;
-  }
-
   .hero-actions {
     flex-direction: column;
     align-items: flex-start;
@@ -915,8 +902,8 @@ ol {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 96px;
-  gap: 48px;
+  margin-bottom: 48px;
+  gap: 32px;
 }
 
 .journey-header-text {
@@ -984,7 +971,7 @@ ol {
   flex: 1;
   background-color: var(--color-bg-card-1);
   border-radius: var(--radius-lg);
-  padding: 48px 32px;
+  padding: 32px 24px;
   position: relative;
   transition:
     background-color 0.3s ease,
@@ -1029,7 +1016,7 @@ ol {
 }
 
 .journey-card:nth-child(2) {
-  margin-top: 48px;
+  margin-top: 24px;
 }
 
 .journey-card-number {
@@ -1038,7 +1025,7 @@ ol {
   font-size: 60px;
   line-height: 60px;
   color: var(--color-accent);
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .journey-card-title {
@@ -1084,14 +1071,14 @@ ol {
 
 .belong-section {
   background-color: var(--color-primary);
-  padding: 128px var(--container-padding);
+  padding: 80px var(--container-padding);
   overflow: visible;
 }
 
 .belong-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 48px;
   align-items: flex-start;
 }
 
@@ -1103,15 +1090,15 @@ ol {
 .belong-image-wrapper {
   position: relative;
   overflow: visible;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .belong-image-blob {
   position: absolute;
-  width: 160px;
-  height: 160px;
-  left: -40px;
-  top: -40px;
+  width: 120px;
+  height: 120px;
+  left: -30px;
+  top: -30px;
   background: rgba(162, 63, 0, 0.2);
   filter: blur(32px);
   border-radius: 9999px;
@@ -1135,29 +1122,29 @@ ol {
 .belong-quote-card {
   position: absolute;
   right: 0;
-  bottom: -100px;
+  bottom: -60px;
   background: var(--color-accent);
   border-radius: var(--radius-md);
-  padding: 32px;
-  max-width: 267px;
+  padding: 24px;
+  max-width: 240px;
   z-index: 2;
   box-shadow: var(--shadow-lg);
 }
 
 .belong-quote-text {
   font-family: var(--font-serif-alt);
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   color: var(--color-text-white);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .belong-quote-label {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 1.4px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1172,7 +1159,7 @@ ol {
   font-size: 48px;
   line-height: 60px;
   color: var(--color-text-white);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -1188,11 +1175,11 @@ ol {
 .belong-stats {
   display: flex;
   align-items: center;
-  padding: 32px 0;
-  gap: 40px;
+  padding: 24px 0;
+  gap: 24px;
   border-top: 1px solid var(--color-border-white-10);
   border-bottom: 1px solid var(--color-border-white-10);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   box-sizing: border-box;
   width: 100%;
   max-width: 552px;
@@ -1209,18 +1196,18 @@ ol {
 .belong-description {
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 28px;
   color: var(--color-text-white-80);
-  margin-bottom: 24px;
-  padding-top: 15px;
+  margin-bottom: 20px;
+  padding-top: 10px;
 }
 
 .belong-features {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
   max-width: 552px;
 }
@@ -1228,19 +1215,23 @@ ol {
 .belong-features li {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   color: var(--color-text-white);
 }
 
 .belong-features svg {
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
   color: var(--color-accent);
   flex-shrink: 0;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  padding: 2px;
+  box-sizing: content-box;
 }
 
 @media (max-width: 768px) {
@@ -1273,15 +1264,15 @@ ol {
 
 .become-section {
   background-color: var(--color-bg-light);
-  padding: 128px 0 208px;
+  padding: 80px 0 120px;
 }
 
 .become-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 80px;
+  gap: 12px;
+  margin-bottom: 48px;
 }
 
 .become-title {
@@ -1296,7 +1287,7 @@ ol {
 .become-grid {
   display: flex;
   flex-direction: row;
-  gap: 48px;
+  gap: 32px;
   align-items: flex-start;
 }
 
@@ -1319,15 +1310,15 @@ ol {
 .become-principles-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .principle-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 16px;
-  gap: 16px;
+  padding: 12px;
+  gap: 12px;
   background: var(--color-bg-card-2);
   border-radius: 12px;
 }
@@ -1353,12 +1344,12 @@ ol {
   flex: 1;
   background: var(--color-bg-white);
   border: 1px solid rgba(193, 200, 194, 0.1);
-  border-radius: 40px;
-  padding: 48px;
+  border-radius: 32px;
+  padding: 32px;
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
 }
 
 .project-card-header {
@@ -1390,7 +1381,7 @@ ol {
 .project-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 31px 60px;
+  gap: 20px 32px;
 }
 
 .project-field {
@@ -1425,7 +1416,7 @@ ol {
 .project-card-quote {
   background: #1b4332;
   border-radius: 16px;
-  padding: 39px 32px 32px;
+  padding: 24px;
 }
 
 .project-card-quote p {
@@ -1470,7 +1461,7 @@ ol {
   background-color: var(--color-bg-white);
   border: 1px solid rgba(193, 200, 194, 0.05);
   border-radius: var(--radius-lg);
-  padding: 40px;
+  padding: 24px;
   text-align: center;
   box-shadow: var(--shadow-sm);
   display: flex;
@@ -1479,30 +1470,30 @@ ol {
 }
 
 .experience-icon {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   background-color: var(--color-bg-card-2);
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   flex-shrink: 0;
 }
 
 .experience-icon svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   color: var(--color-accent);
 }
 
 .experience-title {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 24px;
   color: var(--color-text-dark);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
@@ -1555,7 +1546,7 @@ ol {
 .timeline-grid-new {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 48px;
   align-items: flex-start;
 }
 
@@ -1569,7 +1560,7 @@ ol {
   font-size: 60px;
   line-height: 60px;
   color: var(--color-text-white);
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .timeline-title span {
@@ -1581,7 +1572,7 @@ ol {
 .timeline-items {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
 }
 
 .timeline-item {
@@ -1688,7 +1679,7 @@ ol {
 }
 
 .timeline-image-3 {
-  margin-top: -24px;
+  margin-top: 0;
   aspect-ratio: 1;
 }
 
@@ -1697,7 +1688,7 @@ ol {
 }
 
 .timeline-image-4 {
-  margin-top: 24px;
+  margin-top: 48px;
 }
 
 /* Scroll animation for timeline images */
@@ -1747,33 +1738,6 @@ ol {
     order: -1;
     grid-template-columns: 1fr;
   }
-
-  /* Ensure all timeline images display properly on mobile */
-  .timeline-image {
-    height: 200px;
-    min-height: 200px;
-  }
-
-  .timeline-image-1,
-  .timeline-image-2,
-  .timeline-image-3,
-  .timeline-image-4 {
-    aspect-ratio: auto !important;
-    margin-top: 0 !important;
-    height: 200px !important;
-    min-height: 200px;
-  }
-
-  .timeline-image img,
-  .timeline-image-1 img,
-  .timeline-image-2 img,
-  .timeline-image-3 img,
-  .timeline-image-4 img {
-    height: 200px !important;
-    width: 100%;
-    object-fit: cover;
-    display: block;
-  }
 }
 
 /* ========================================
@@ -1782,7 +1746,7 @@ ol {
 
 .voices-section {
   background-color: var(--color-bg-light);
-  padding: 128px 0;
+  padding: 80px 0;
 }
 
 .voices-subtitle {
@@ -1797,62 +1761,57 @@ ol {
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
 .testimonial-card {
   background-color: var(--color-bg-white);
   border-radius: var(--radius-xl);
-  padding: 40px;
+  padding: 28px;
   position: relative;
   box-shadow: var(--shadow-md);
 }
 
 .testimonial-quote-icon {
   position: absolute;
-  top: 32px;
-  right: 32px;
-  width: 42px;
-  height: 30px;
-  background: var(--color-accent-20);
-  border-radius: 4px;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 26px;
 }
 
 .testimonial-quote-icon svg {
   width: 100%;
   height: 100%;
   color: var(--color-accent);
+  transform: rotate(180deg);
 }
 
 .testimonial-quote {
-  font-family: var(--font-sans);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 29px;
+  font: italic 400 16px/26px var(--font-sans);
   color: var(--color-text-dark);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .testimonial-author {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .testimonial-avatar {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   background-color: var(--color-bg-card-2);
-  border-radius: 9999px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .testimonial-avatar svg {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   color: var(--color-text-muted);
 }
 
@@ -1861,16 +1820,19 @@ ol {
   flex-direction: column;
 }
 
-.testimonial-name {
+.testimonial-name,
+.testimonial-role {
   font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
   color: var(--color-text-dark);
 }
 
+.testimonial-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .testimonial-role {
-  font-family: var(--font-sans);
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -1891,7 +1853,7 @@ ol {
   position: relative;
   overflow: hidden;
   background-color: var(--color-bg-cream);
-  padding: 160px 48px;
+  padding: 100px 48px;
 }
 
 .cta-blob-left {
@@ -1927,20 +1889,20 @@ ol {
   font-family: "Tinos", serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 44px;
   color: var(--color-accent);
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .cta-title {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 48px;
   color: var(--color-primary);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1955,17 +1917,18 @@ ol {
 .cta-title-line2 {
   font-family: var(--font-serif-alt);
   font-weight: 400;
+  font-style: italic;
 }
 
 .cta-subtitle {
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 28px;
   color: var(--color-text-body);
   text-align: center;
-  max-width: 748px;
-  margin: 0 auto 48px;
+  max-width: 600px;
+  margin: 0 auto 32px;
 }
 
 .cta-actions {
@@ -1973,7 +1936,7 @@ ol {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 @media (max-width: 768px) {
@@ -2086,13 +2049,13 @@ ol {
   .journey-cards {
     flex-direction: column;
     height: auto;
-    gap: 16px;
+    gap: 12px;
   }
 
   .journey-card {
     height: auto;
-    min-height: 280px;
-    padding: 32px 24px;
+    min-height: auto;
+    padding: 24px 20px;
   }
 
   .journey-card:nth-child(2) {
@@ -2101,19 +2064,21 @@ ol {
   }
 
   .journey-card-number {
-    font-size: 48px;
-    line-height: 48px;
-    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 16px;
   }
 
   .journey-card-title {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 12px;
   }
 
   .journey-card-description {
     font-size: 15px;
-    line-height: 24px;
+    line-height: 22px;
+    margin-bottom: 16px;
   }
 
   /* Belong Section */
@@ -2163,16 +2128,16 @@ ol {
   /* Experience Section */
   .experience-cards {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
   }
 
   .experience-card {
-    padding: 24px;
+    padding: 20px;
   }
 
   .experience-title {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   /* Timeline Section */
@@ -2211,11 +2176,16 @@ ol {
   /* Testimonials */
   .testimonials-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
   }
 
   .testimonial-card {
-    padding: 24px;
+    padding: 20px;
+  }
+
+  .testimonial-quote-icon {
+    top: 16px;
+    right: 16px;
   }
 
   .testimonial-quote {
@@ -2228,22 +2198,20 @@ ol {
     padding: 80px 24px;
   }
 
-  .cta-tagline {
-    font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 12px;
-  }
-
-  .cta-title {
-    font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 20px;
-  }
-
+  .cta-tagline,
+  .cta-title,
   .cta-title-line1,
   .cta-title-line2 {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  .cta-tagline {
+    margin-bottom: 12px;
+  }
+
+  .cta-title {
+    margin-bottom: 20px;
   }
 
   .cta-subtitle {
@@ -2439,6 +2407,11 @@ ol {
     padding: 20px;
   }
 
+  .testimonial-quote-icon {
+    top: 12px;
+    right: 12px;
+  }
+
   .testimonial-quote {
     font-size: 14px;
     line-height: 22px;
@@ -2457,22 +2430,20 @@ ol {
     padding: 60px 16px;
   }
 
-  .cta-tagline {
-    font-size: 24px;
-    line-height: 32px;
-    margin-bottom: 8px;
-  }
-
-  .cta-title {
-    font-size: 24px;
-    line-height: 32px;
-    margin-bottom: 16px;
-  }
-
+  .cta-tagline,
+  .cta-title,
   .cta-title-line1,
   .cta-title-line2 {
     font-size: 24px;
     line-height: 32px;
+  }
+
+  .cta-tagline {
+    margin-bottom: 8px;
+  }
+
+  .cta-title {
+    margin-bottom: 16px;
   }
 
   .cta-subtitle {
