@@ -610,10 +610,7 @@ ol {
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
-.section-subtitle p {
-  font-family: var(--font-serif-alt);
-  font-weight: 400;
-}
+
 .faq-question {
   width: 100%;
   padding: 1.25rem 1.5rem;
