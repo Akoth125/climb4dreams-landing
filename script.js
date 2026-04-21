@@ -86,9 +86,6 @@ function observeElements(selector, callback, options = {}) {
 function initScrollAnimations() {
   const selectors = [
     ".animate-on-scroll",
-    ".animate-scale",
-    ".animate-from-left",
-    ".animate-from-right",
     ".journey-card",
     ".experience-card",
     ".testimonial-card",

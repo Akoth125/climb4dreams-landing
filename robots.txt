@@ -1,0 +1,7 @@
+# Robots.txt for Climb4Dreams
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://climb4dreams.org/sitemap.xml
