@@ -146,7 +146,7 @@ function initSectionReveals() {
 // ========================================
 
 const VIDEO_URL =
-  "https://www.youtube.com/embed/GiDPiKOGUN8?si=OSZhiQRziMV17H4H&autoplay=1";
+  "https://www.youtube-nocookie.com/embed/GiDPiKOGUN8?si=OSZhiQRziMV17H4H&autoplay=1";
 
 const videoBtn = document.getElementById("videoBtn");
 const videoModal = document.getElementById("videoModal");
