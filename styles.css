@@ -226,10 +226,11 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("images/hero.png");
+  background-image: url("images/hero.png?v=2");
   background-size: cover;
   background-position: center;
   margin-top: var(--navbar-height);
+  content-visibility: auto;
 }
 
 .hero-overlay {
@@ -523,11 +524,6 @@ ol {
   background-color: var(--color-bg-cream);
 }
 
-.section-dark {
-  background-color: var(--color-primary);
-  color: var(--color-text-white);
-}
-
 .section-header {
   margin-bottom: 3rem;
   text-align: center;
@@ -547,20 +543,12 @@ ol {
   font-weight: 400;
 }
 
-.section-dark .section-title {
-  color: var(--color-text-white);
-}
-
 .section-subtitle {
   font-family: var(--font-sans);
   font-size: 18px;
   line-height: 28px;
   color: var(--color-text-body);
   max-width: 576px;
-}
-
-.section-dark .section-subtitle {
-  color: var(--color-text-white-80);
 }
 
 /* Accent underline */
@@ -1666,6 +1654,12 @@ ol {
     order: -1;
     grid-template-columns: 1fr;
   }
+
+  /* Ensure timeline images are visible on mobile */
+  .timeline-image.animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ========================================
@@ -2302,6 +2296,12 @@ ol {
   .timeline-image {
     height: 160px;
     min-height: 160px;
+  }
+
+  /* Ensure timeline images are visible on mobile */
+  .timeline-image.animate-on-scroll {
+    opacity: 1;
+    transform: none;
   }
 
   /* Reset all timeline images for mobile layout */
