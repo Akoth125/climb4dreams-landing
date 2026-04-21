@@ -226,7 +226,7 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("images/hero.png?v=2");
+  background-image: url("images/hero.webp");
   background-size: cover;
   background-position: center;
   margin-top: var(--navbar-height);
@@ -1435,7 +1435,7 @@ ol {
 
 .timeline-section {
   position: relative;
-  background-image: url("images/bg2.jpeg");
+  background-image: url("images/bg2.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
