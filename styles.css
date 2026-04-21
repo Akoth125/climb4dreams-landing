@@ -149,11 +149,6 @@ ol {
   max-width: 896px;
 }
 
-/* Wide container for grid layouts */
-.container-lg {
-  max-width: 1184px;
-}
-
 /* Text alignment utility */
 .text-center {
   text-align: center;
@@ -325,65 +320,6 @@ ol {
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Staggered animation delays */
-.animate-delay-1 {
-  transition-delay: 0.1s;
-}
-.animate-delay-2 {
-  transition-delay: 0.2s;
-}
-.animate-delay-3 {
-  transition-delay: 0.3s;
-}
-.animate-delay-4 {
-  transition-delay: 0.4s;
-}
-.animate-delay-5 {
-  transition-delay: 0.5s;
-}
-
-/* Scale animation for cards */
-.animate-scale {
-  opacity: 0;
-  transform: scale(0.95);
-  transition:
-    opacity 0.5s ease-out,
-    transform 0.5s ease-out;
-}
-
-.animate-scale.visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Fade in from left */
-.animate-from-left {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
-}
-
-.animate-from-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Fade in from right */
-.animate-from-right {
-  opacity: 0;
-  transform: translateX(40px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
-}
-
-.animate-from-right.visible {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .hero-content {
@@ -646,15 +582,13 @@ ol {
    Impact Section - Shared Stat Styles
    ======================================== */
 
-/* Shared styles for belong-stat */
-.stat,
+/* Stat styles for belong section */
 .belong-stat {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.stat-number,
 .belong-stat-number {
   font-family: var(--font-sans);
   font-weight: 700;
@@ -663,7 +597,6 @@ ol {
   color: var(--color-accent);
 }
 
-.stat-label,
 .belong-stat-label {
   font-family: var(--font-sans);
   font-size: 12px;
@@ -877,16 +810,25 @@ ol {
   outline-offset: 2px;
 }
 
-.sr-only {
+/* Skip to content link */
+.skip-link {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-text-white);
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 0 0 var(--radius-sm) 0;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* ========================================
@@ -1137,16 +1079,6 @@ ol {
   line-height: 24px;
   color: var(--color-text-white);
   margin-bottom: 6px;
-}
-
-.belong-quote-label {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .belong-content-col {
@@ -1615,10 +1547,6 @@ ol {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   padding-top: 20px;
-}
-
-.timeline-image-row {
-  display: contents;
 }
 
 .timeline-image {
@@ -2348,10 +2276,6 @@ ol {
   }
 
   .principle-number {
-    font-size: 14px;
-  }
-
-  .principle-title {
     font-size: 14px;
   }
 

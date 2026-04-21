@@ -15,6 +15,8 @@
     />
     <link rel="dns-prefetch" href="https://forms.gle" />
     <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://i.ytimg.com" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,17 +28,75 @@
       rel="stylesheet"
     />
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://climb4dreams.org/" />
+    <meta
+      property="og:title"
+      content="Climb4Dreams - Transformative Fellowship for African Leaders"
+    />
+    <meta
+      property="og:description"
+      content="A transformative fellowship designed for the next generation of African leaders. Scale peaks, solve problems, and lead the ascent."
+    />
+    <meta
+      property="og:image"
+      content="https://climb4dreams.org/images/hero.png"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://climb4dreams.org/" />
+    <meta
+      name="twitter:title"
+      content="Climb4Dreams - Transformative Fellowship for African Leaders"
+    />
+    <meta
+      name="twitter:description"
+      content="A transformative fellowship designed for the next generation of African leaders. Scale peaks, solve problems, and lead the ascent."
+    />
+    <meta
+      name="twitter:image"
+      content="https://climb4dreams.org/images/hero.png"
+    />
+
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css?v=2" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Climb4Dreams",
+        "description": "A transformational leadership journey designed to shape, stretch, and empower the next generation of African leaders.",
+        "url": "https://climb4dreams.org",
+        "logo": "https://climb4dreams.org/images/hero.png",
+        "sameAs": ["https://www.youtube.com/watch?v=GiDPiKOGUN8"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@inspirespaces.org",
+          "telephone": "+254708846363",
+          "contactType": "customer service"
+        }
+      }
+    </script>
   </head>
 
   <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="navbar-inner">
         <!-- Logo -->
-        <a href="#" class="navbar-logo">
-          <svg fill="currentColor" data-icon="mountain"></svg>
+        <a href="#" class="navbar-logo" aria-label="Climb4Dreams home">
+          <svg
+            fill="currentColor"
+            data-icon="mountain"
+            aria-hidden="true"
+          ></svg>
           Climb4Dreams
         </a>
 
@@ -53,7 +113,7 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero" role="banner">
+    <section id="main-content" class="hero" role="banner">
       <div class="hero-overlay"></div>
 
       <div class="hero-content">
@@ -65,9 +125,9 @@
           </h1>
 
           <p class="hero-subtitle">
-            A formative fellowship designed for the next generation of
-            African leaders. Scale peaks, solve problems, and lead the ascent
-            for the 2026 cohort.
+            A formative fellowship designed for the next generation of African
+            leaders. Scale peaks, solve problems, and lead the ascent for the
+            2026 cohort.
           </p>
 
           <div class="hero-actions">
@@ -91,7 +151,7 @@
     </section>
 
     <!-- THE JOURNEY OVERVIEW -->
-    <section class="section journey-section">
+    <section id="journey" class="section journey-section">
       <div class="container">
         <div class="journey-header">
           <div class="journey-header-text">
@@ -317,8 +377,8 @@
       </div>
     </section>
 
-    <!-- C$D Experience -->
-    <section class="section experience-section">
+    <!-- C4D Experience -->
+    <section id="experience" class="section experience-section">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">The C4D Experience</h2>
@@ -599,13 +659,58 @@
               </p>
             </div>
           </details>
-         
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>What is the cost of the fellowship?</h3>
+              <svg fill="none" stroke="currentColor" data-icon="chevron"></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                The fellowship is fully funded for selected participants. This
+                includes all training, mountain expedition costs, accommodation,
+                and meals during in-person modules. Travel to Kenya may be
+                subsidized based on demonstrated need.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>When are applications due?</h3>
+              <svg fill="none" stroke="currentColor" data-icon="chevron"></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Applications for the 2026 cohort are now open. We review
+                applications on a rolling basis, so early submission is
+                encouraged. Selected candidates will be notified within 4-6
+                weeks of submission.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>What does the fellowship include?</h3>
+              <svg fill="none" stroke="currentColor" data-icon="chevron"></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                The fellowship includes: 6-month leadership curriculum, Mt.
+                Kilimanjaro expedition, Mawazo Hub innovation sessions,
+                mentorship from experienced leaders, community service projects,
+                cultural immersion experiences, and lifetime alumni network
+                access.
+              </p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
 
     <!-- FINAL CTA -->
-    <section class="cta-section">
+    <section id="apply" class="cta-section">
       <div class="cta-blob-left"></div>
       <div class="cta-blob-right"></div>
       <div class="container container-sm">
@@ -692,7 +797,7 @@
         </div>
 
         <div class="footer-bottom">
-          <p>© 2026 Climb4Dreams. All rights reserved.</p>
+          <p>2026 Climb4Dreams. All rights reserved.</p>
           <p>Let's lead, love, and serve together.</p>
         </div>
       </div>

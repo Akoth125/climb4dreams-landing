@@ -33,8 +33,6 @@ const ICONS = {
   mind: '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="14" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="14" r="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-width="2" d="M12 10v2M10 13l-1 1m6-1l1 1" fill="none" stroke="currentColor"/>',
   leadership:
     '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z" fill="none" stroke="currentColor"/>',
-  quote:
-    '<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.459l.995 2.126c-4.432 1.175-7.359 4.536-7.359 8.333V21h-2.619zm-6.017 0v-7.391c0-5.704 3.731-9.57 8.983-10.459l.995 2.126c-4.432 1.175-7.359 4.536-7.359 8.333V21h-2.619z" fill="currentColor"/>',
   format_quote:
     '<path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.375 1.807 0 3.162 1.247 3.162 3.281 0 1.968-1.371 3.58-3.379 3.58-1.076 0-2.091-.504-2.815-1.387zm11.014 0C14.567 16.227 14 15 14 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.375 1.807 0 3.162 1.247 3.162 3.281 0 1.968-1.371 3.58-3.379 3.58-1.076 0-2.091-.504-2.815-1.387z" fill="currentColor"/>',
 };
