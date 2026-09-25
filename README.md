@@ -4,7 +4,7 @@ A responsive landing page built for Climb4Dreams.
 
 ## Live Demo
 
-[View the live website]([https://climb4dreams-landing.vercel.app/)]
+[View the live website] (https://climb4dreams-landing.vercel.app/) 
 
 ## Built With
 
